@@ -19,23 +19,6 @@ automatisch angelegt. Trage deine API-Keys über die Menüpunkte
 dann ausschließlich in der jeweiligen `.env`-Datei, niemals in
 `chatbot.cfg` und niemals im Git-Repository (siehe `.gitignore`).
 
-## Windows-.exe bauen
-
-```bat
-install.bat   REM einmalig: virtuelle Umgebung + Abhängigkeiten
-build.bat     REM erstellt dist\Pandora_ChatBot\Pandora_ChatBot.exe
-```
-
-`build.bat` baut per PyInstaller einen **--onedir**-Build (ein Ordner
-mit `.exe` + allen Abhängigkeiten statt eines einzelnen
---onefile-Archivs - startet dadurch spürbar schneller), inklusive
-`--collect-all` für PyQt6/anthropic/google.genai/ollama/dotenv/
-SpeechRecognition/pyttsx3 sowie dem App-Icon unter
-`assets/icons/pandora_chatbot.ico`. Der komplette Ordner
-`dist\Pandora_ChatBot\` (nicht nur die `.exe`) wird zum
-Weitergeben/Verschieben benötigt, da `assets/` (Sprachpakete, Rollen,
-Konfiguration) direkt daneben liegt.
-
 ## Mehrsprachigkeit
 
 Neue Sprache hinzufügen: einfach eine neue `<code>.json` nach dem
