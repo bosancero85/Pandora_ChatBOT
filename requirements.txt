@@ -1,0 +1,17 @@
+# Pandora® ChatBot - Abhängigkeiten
+# ------------------------------------
+# Pflicht (GUI-Framework):
+PyQt6>=6.6
+
+# Sensible Daten in .env-Dateien lesen/schreiben (assets/configs/config_manager.py):
+python-dotenv>=1.0
+
+# KI-Anbieter (nur installieren, was du auch nutzt - jeder Worker meldet
+# selbst einen freundlichen Hinweis, falls das jeweilige Paket fehlt):
+anthropic>=0.40      # Claude (core/claude_worker.py)
+google-genai>=0.3    # Gemini (core/gemini_worker.py)
+ollama>=0.4           # Ollama (core/ollama_worker.py)
+
+# Optionale Plugins (plugins/):
+SpeechRecognition>=3.10   # speech_to_txt.py
+pyttsx3>=2.90             # txt_to_speech.py
