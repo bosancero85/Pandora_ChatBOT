@@ -73,37 +73,7 @@ assets/
   language_packs/               Sprachpakete
 ```
 
-## Changelog (dieser Durchlauf)
 
-- **Bugfix Gemini:** `contents`/`parts` mussten für das neue `google-genai`-SDK
-  als `{"text": "..."}`-Dicts übergeben werden statt als rohe Strings
-  (`core/gemini_worker.py`).
-- **Bugfix doppelter Ordner:** `assets/configs/config_manager.py` berechnete
-  nach dem Verschieben der Datei den Projekt-Root falsch, wodurch
-  `assets/assets/configs/...` entstand und API-Keys/Einstellungen dort
-  "unsichtbar" landeten. Fix inkl. automatischer einmaliger Migration
-  bereits gespeicherter Werte beim nächsten Start.
-- **Ladebildschirm:** komplett neu, mit selbst gezeichnetem Glow-Logo
-  (kein Bild-Asset nötig), Fortschrittsbalken und einer mitlaufenden
-  Liste der geladenen Sprachen/Rollen/Plugins/Tools.
-- **Hilfe:** `help_window__ui__.py` zeigt jetzt zwei Tabs - "Einrichtung"
-  (Kurzanleitung) und "API-Keys" (Schritt-für-Schritt je Anbieter inkl.
-  Button zum Öffnen der jeweiligen Anbieter-Seite). Alle Texte kommen aus
-  den Sprachpaketen.
-- **Neu:** `disclaimer_window__ui__.py` und `license_window__ui__.py`,
-  beide über das Hilfe-Menü erreichbar, ebenfalls vollständig
-  mehrsprachig über die JSON-Sprachpakete.
-- **Entfernt (auf Wunsch):** Die komplette Pandora<#>-Skriptsprache
-  (`plugins/pandora_hash/`, Beispiele, `core/pandora_hash_translator_worker.py`,
-  `app/pandora_hash_plugin.py`) sowie die zugehörige feste
-  "nur Pandora<#> zum Coden"-Systemprompt-Direktive wurden vollständig
-  entfernt. Der ChatBot nutzt für Coding-Aufgaben jetzt wieder
-  ausschließlich die normalen, per Mehrfachauswahl gewählten
-  Rollen-Prompts - keine zusätzliche, immer aktive Zwangsregel mehr.
-  Die "Code ausführen"-Schaltfläche an Chat-Nachrichten wurde ebenfalls
-  entfernt, da sie ausschließlich für Pandora<#> gedacht war.
-- **Windows-.exe:** `build.bat` (PyInstaller --onedir, --collect-all,
-  App-Icon) und `install.bat` (virtuelle Umgebung einrichten) hinzugefügt.
   Neues Icon unter `assets/icons/pandora_chatbot.ico` (passend zum
   Ladebildschirm-Design). Alle Pfad-Berechnungen (`config_manager.py`,
   `language_manager.py`, `role_manager.py`, `memory_worker.py`,
