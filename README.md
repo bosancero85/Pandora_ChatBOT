@@ -1,4 +1,4 @@
-# Pandora® ChatBot
+# Pandora® ChatBot - Feel the Freedom
 
 ---
 
