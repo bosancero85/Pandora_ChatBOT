@@ -2,7 +2,7 @@
 
 ---
 
-![Screenshot](assets/icons/pandora_chatbot.png)
+![Screenshot](assets/icons/icon.png)
 
 ---
 
