@@ -1,5 +1,11 @@
 # Pandora® ChatBot
 
+---
+
+![Screenshot](assets/icons/pandora_chatbot.png)
+
+---
+
 Modularer Multi-Provider KI-Chat-Client (Claude, Gemini, Ollama) mit
 automatisch geladenem Rollen-System (Mehrfachauswahl), vollständiger
 Mehrsprachigkeit und sensiblen Zugangsdaten ausschließlich in
